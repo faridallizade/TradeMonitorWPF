@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using TradeMonitorApp;
 
-namespace TradeMonitorWPF
+namespace FileConverter
 {
     public partial class App : Application
     {
@@ -27,7 +27,7 @@ namespace TradeMonitorWPF
                     .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
                     .Build();
 
-                var Settings = config.GetSection("MonitorSettings").Get<MonitorSettings>();
+                Settings = config.GetSection("MonitorSettings").Get<MonitorSettings>();
 
                 if (Settings == null)
                     throw new Exception("MonitorSettings section is missing or invalid in appsettings.json.");

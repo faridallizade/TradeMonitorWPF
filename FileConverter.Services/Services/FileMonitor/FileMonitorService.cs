@@ -2,34 +2,38 @@
 using FileConverter.Core.Services.FileLoaderService;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using System.Xml.Linq;
 
 namespace FileConverter.Service.Services.FileMonitor
 {
     public class FileMonitorService
     {
+        private CancellationTokenSource _cancellationTokenSource;
         private readonly IEnumerable<IFileLoaderService> _loaders;
-        private readonly string _directory;
-        private readonly int _intervalSeconds;
         private readonly HashSet<string> _processedFiles = new();
 
         public event Action<List<TradeData>> OnDataLoaded;
 
-        public FileMonitorService(IEnumerable<IFileLoaderService> loaders,string directory,int intervalSeconds)
+        public string InputDirectory { get; private set; }
+        public int IntervalSeconds { get; private set; }
+
+        public FileMonitorService(IEnumerable<IFileLoaderService> loaders, string directory, int intervalSeconds)
         {
             _loaders = loaders;
-            _directory = directory;
-            _intervalSeconds = intervalSeconds;
+            InputDirectory = directory;
+            IntervalSeconds = intervalSeconds;
         }
 
         public async Task StartAsync()
         {
-            while (true)
+            _cancellationTokenSource = new CancellationTokenSource();
+            var token = _cancellationTokenSource.Token;
+            while (!token.IsCancellationRequested)
             {
-                var files = Directory.GetFiles(_directory);
+                var files = Directory.GetFiles(InputDirectory);
                 var newFiles = files.Where(f => !_processedFiles.Contains(f)).ToList();
 
                 if (newFiles.Any())
@@ -37,10 +41,15 @@ namespace FileConverter.Service.Services.FileMonitor
                     var tasks = newFiles.Select(ProcessFileAsync);
                     await Task.WhenAll(tasks);
                 }
-                await Task.Delay(_intervalSeconds * 1000);
+
+                await Task.Delay(IntervalSeconds * 1000);
             }
         }
 
+        public void Stop()
+        {
+            _cancellationTokenSource?.Cancel();
+        }
 
         private async Task ProcessFileAsync(string filePath)
         {
@@ -55,10 +64,21 @@ namespace FileConverter.Service.Services.FileMonitor
                 _processedFiles.Add(filePath);
                 OnDataLoaded?.Invoke(data.ToList());
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Console.WriteLine($"Error processing {filePath}: {ex.Message}");
             }
+        }
+
+
+
+        public void UpdateSettings(string newDirectory, int newInterval)
+        {
+            InputDirectory = newDirectory;
+            IntervalSeconds = newInterval;
+
+            Stop();
+            StartAsync();
         }
     }
 }

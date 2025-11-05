@@ -23,10 +23,10 @@ namespace FileConverter.Service.Services.FileLoader
                 {
                     Date = DateTime.Parse(v.Attribute("date")?.Value),
                     Open = decimal.Parse(v.Attribute("open")?.Value),
-                    High = decimal.Parse(v.Attribute("High")?.Value),
-                    Low = decimal.Parse(v.Attribute("Low")?.Value),
-                    Close = decimal.Parse(v.Attribute("Close")?.Value),
-                    Volume = long.Parse(v.Attribute("Volume")?.Value)
+                    High = decimal.Parse(v.Attribute("high")?.Value),
+                    Low = decimal.Parse(v.Attribute("low")?.Value),
+                    Close = decimal.Parse(v.Attribute("close")?.Value),
+                    Volume = long.Parse(v.Attribute("volume")?.Value)
                 });
         }
     }

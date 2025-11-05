@@ -20,7 +20,7 @@ namespace FileConverter.Service.Services.FileLoader
             foreach (var line in lines)
             {
                 var parts = line.Split(',');
-                if(parts.Length != 6 || parts[0] == "Date") continue;
+                if(parts.Length != 6 || parts[0] == "date") continue;
 
                 list.Add(new TradeData
                 {
