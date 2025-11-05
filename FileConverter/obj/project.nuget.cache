@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "ulKZbz/ylt8=",
+  "dgSpecHash": "pIjx8dPVMWk=",
   "success": true,
   "projectFilePath": "C:\\Users\\faceb\\source\\repos\\FileConverter\\FileConverter\\FileConverter.UI.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\faceb\\.nuget\\packages\\microsoft.extensions.configuration\\9.0.10\\microsoft.extensions.configuration.9.0.10.nupkg.sha512",
+    "C:\\Users\\faceb\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\9.0.10\\microsoft.extensions.configuration.abstractions.9.0.10.nupkg.sha512",
+    "C:\\Users\\faceb\\.nuget\\packages\\microsoft.extensions.primitives\\9.0.10\\microsoft.extensions.primitives.9.0.10.nupkg.sha512"
+  ],
   "logs": []
 }
