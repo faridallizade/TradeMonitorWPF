@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Configuration;
 using System.Configuration;
 using System.Data;
+using System.IO;
 using System.Windows;
 
 namespace FileConverter
@@ -15,10 +16,13 @@ namespace FileConverter
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
-            try
-            {
-                var config = new ConfigurationBuilder
-            }
+            var config = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+                .Build();
+
+            Settings = config.GetSection("MonitorSettings")
+                .Get<MonitorSettings>();
         }
     }
 
