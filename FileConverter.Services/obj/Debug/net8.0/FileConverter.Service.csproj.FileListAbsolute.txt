@@ -1,0 +1,17 @@
+C:\Users\faceb\source\repos\FileConverter\FileConverter.Services\bin\Debug\net8.0\FileConverter.Service.deps.json
+C:\Users\faceb\source\repos\FileConverter\FileConverter.Services\bin\Debug\net8.0\FileConverter.Service.dll
+C:\Users\faceb\source\repos\FileConverter\FileConverter.Services\bin\Debug\net8.0\FileConverter.Service.pdb
+C:\Users\faceb\source\repos\FileConverter\FileConverter.Services\bin\Debug\net8.0\FileConverter.Core.dll
+C:\Users\faceb\source\repos\FileConverter\FileConverter.Services\bin\Debug\net8.0\FileConverter.Repository.dll
+C:\Users\faceb\source\repos\FileConverter\FileConverter.Services\bin\Debug\net8.0\FileConverter.Repository.pdb
+C:\Users\faceb\source\repos\FileConverter\FileConverter.Services\bin\Debug\net8.0\FileConverter.Core.pdb
+C:\Users\faceb\source\repos\FileConverter\FileConverter.Services\obj\Debug\net8.0\FileConverter.Service.csproj.AssemblyReference.cache
+C:\Users\faceb\source\repos\FileConverter\FileConverter.Services\obj\Debug\net8.0\FileConverter.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\faceb\source\repos\FileConverter\FileConverter.Services\obj\Debug\net8.0\FileConverter.Service.AssemblyInfoInputs.cache
+C:\Users\faceb\source\repos\FileConverter\FileConverter.Services\obj\Debug\net8.0\FileConverter.Service.AssemblyInfo.cs
+C:\Users\faceb\source\repos\FileConverter\FileConverter.Services\obj\Debug\net8.0\FileConverter.Service.csproj.CoreCompileInputs.cache
+C:\Users\faceb\source\repos\FileConverter\FileConverter.Services\obj\Debug\net8.0\FileConv.9B0465E2.Up2Date
+C:\Users\faceb\source\repos\FileConverter\FileConverter.Services\obj\Debug\net8.0\FileConverter.Service.dll
+C:\Users\faceb\source\repos\FileConverter\FileConverter.Services\obj\Debug\net8.0\refint\FileConverter.Service.dll
+C:\Users\faceb\source\repos\FileConverter\FileConverter.Services\obj\Debug\net8.0\FileConverter.Service.pdb
+C:\Users\faceb\source\repos\FileConverter\FileConverter.Services\obj\Debug\net8.0\ref\FileConverter.Service.dll
