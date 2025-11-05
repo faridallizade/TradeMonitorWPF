@@ -15,3 +15,4 @@ C:\Users\faceb\source\repos\FileConverter\FileConverter.Services\obj\Debug\net8.
 C:\Users\faceb\source\repos\FileConverter\FileConverter.Services\obj\Debug\net8.0\refint\FileConverter.Service.dll
 C:\Users\faceb\source\repos\FileConverter\FileConverter.Services\obj\Debug\net8.0\FileConverter.Service.pdb
 C:\Users\faceb\source\repos\FileConverter\FileConverter.Services\obj\Debug\net8.0\ref\FileConverter.Service.dll
+C:\Users\faceb\source\repos\FileConverter\FileConverter.Services\obj\Debug\net8.0\FileConverter.Service.sourcelink.json

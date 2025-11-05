@@ -9,3 +9,5 @@ C:\Users\faceb\source\repos\FileConverter\FileConverter.Core\obj\Debug\net8.0\Fi
 C:\Users\faceb\source\repos\FileConverter\FileConverter.Core\obj\Debug\net8.0\refint\FileConverter.Core.dll
 C:\Users\faceb\source\repos\FileConverter\FileConverter.Core\obj\Debug\net8.0\FileConverter.Core.pdb
 C:\Users\faceb\source\repos\FileConverter\FileConverter.Core\obj\Debug\net8.0\ref\FileConverter.Core.dll
+C:\Users\faceb\source\repos\FileConverter\FileConverter.Core\obj\Debug\net8.0\FileConverter.Core.csproj.AssemblyReference.cache
+C:\Users\faceb\source\repos\FileConverter\FileConverter.Core\obj\Debug\net8.0\FileConverter.Core.sourcelink.json

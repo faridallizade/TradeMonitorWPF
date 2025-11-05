@@ -25,3 +25,17 @@ C:\Users\faceb\source\repos\FileConverter\FileConverter\obj\Debug\net8.0-windows
 C:\Users\faceb\source\repos\FileConverter\FileConverter\obj\Debug\net8.0-windows\FileConverter.UI.pdb
 C:\Users\faceb\source\repos\FileConverter\FileConverter\obj\Debug\net8.0-windows\FileConverter.UI.genruntimeconfig.cache
 C:\Users\faceb\source\repos\FileConverter\FileConverter\obj\Debug\net8.0-windows\ref\FileConverter.UI.dll
+C:\Users\faceb\source\repos\FileConverter\FileConverter\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.dll
+C:\Users\faceb\source\repos\FileConverter\FileConverter\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\faceb\source\repos\FileConverter\FileConverter\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\faceb\source\repos\FileConverter\FileConverter\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\faceb\source\repos\FileConverter\FileConverter\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\faceb\source\repos\FileConverter\FileConverter\bin\Debug\net8.0-windows\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\faceb\source\repos\FileConverter\FileConverter\bin\Debug\net8.0-windows\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\faceb\source\repos\FileConverter\FileConverter\bin\Debug\net8.0-windows\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\faceb\source\repos\FileConverter\FileConverter\bin\Debug\net8.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\faceb\source\repos\FileConverter\FileConverter\bin\Debug\net8.0-windows\System.IO.Pipelines.dll
+C:\Users\faceb\source\repos\FileConverter\FileConverter\bin\Debug\net8.0-windows\System.Text.Encodings.Web.dll
+C:\Users\faceb\source\repos\FileConverter\FileConverter\bin\Debug\net8.0-windows\System.Text.Json.dll
+C:\Users\faceb\source\repos\FileConverter\FileConverter\bin\Debug\net8.0-windows\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
+C:\Users\faceb\source\repos\FileConverter\FileConverter\obj\Debug\net8.0-windows\FileConverter.UI.sourcelink.json

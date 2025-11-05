@@ -13,3 +13,4 @@ C:\Users\faceb\source\repos\FileConverter\FileConverter.Repository\obj\Debug\net
 C:\Users\faceb\source\repos\FileConverter\FileConverter.Repository\obj\Debug\net8.0\refint\FileConverter.Repository.dll
 C:\Users\faceb\source\repos\FileConverter\FileConverter.Repository\obj\Debug\net8.0\FileConverter.Repository.pdb
 C:\Users\faceb\source\repos\FileConverter\FileConverter.Repository\obj\Debug\net8.0\ref\FileConverter.Repository.dll
+C:\Users\faceb\source\repos\FileConverter\FileConverter.Repository\obj\Debug\net8.0\FileConverter.Repository.sourcelink.json

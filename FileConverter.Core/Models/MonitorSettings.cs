@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace FileConverter.Core.Models
 {
-    internal class MonitorSettings
+    public class MonitorSettings
     {
+        public string InputDirectory { get; set; }
+        public int CheckFrequencySeconds { get; set; }
+        public List<string> EnabledLoaders { get; set; }
     }
 }

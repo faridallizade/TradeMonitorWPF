@@ -1,47 +1,38 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using FileConverter;
+using FileConverter.Core.Models;
+using FileConverter.Service.Services.FileMonitor;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Runtime.CompilerServices;
-
-public class TradeData
-{
-    public DateTime Date { get; set; }
-    public decimal Open { get; set; }
-    public decimal High { get; set; }
-    public decimal Low { get; set; }
-    public decimal Close { get; set; }
-    public long Volume { get; set; }
-}
 
 public class MainViewModel : INotifyPropertyChanged
 {
     public ObservableCollection<TradeData> TradeDataList { get; set; } = new();
+    public string LastCheckedTime { get; set; }
 
-    private string _lastCheckedTime;
-    public string LastCheckedTime
+    private FileMonitorService _fileMonitor;
+
+    public event PropertyChangedEventHandler? PropertyChanged;
+
+    public MainViewModel(FileMonitorService fileMonitor)
     {
-        get => _lastCheckedTime;
-        set
+        _fileMonitor = fileMonitor;
+        _fileMonitor.OnDataLoaded += AddTradeData;
+    }
+
+    private void AddTradeData(List<TradeData> data)
+    {
+        App.Current.Dispatcher.Invoke(() =>
         {
-            _lastCheckedTime = value;
-            OnPropertyChanged();
-        }
+            foreach (var item in data)
+                TradeDataList.Add(item);
+            LastCheckedTime = DateTime.Now.ToString("HH:mm:ss");
+            OnPropertyChanged(nameof(LastCheckedTime));
+        });
     }
 
-    public void AddTradeData(List<TradeData> data)
+   
+    private void OnPropertyChanged(string propertyName)
     {
-        if (data == null || data.Count == 0)
-            return;
-
-        foreach (var d in data)
-            TradeDataList.Add(d);
-
-        LastCheckedTime = DateTime.Now.ToString("HH:mm:ss");
+        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
-
-    public event PropertyChangedEventHandler PropertyChanged;
-
-    protected void OnPropertyChanged([CallerMemberName] string propName = null)
-        => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propName));
 }

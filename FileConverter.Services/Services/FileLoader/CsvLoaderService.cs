@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace FileConverter.Service.Services.FileLoader
 {
-    internal class CsvLoaderService : IFileLoaderService
+    public class CsvLoaderService : IFileLoaderService
     {
         public string FileType => FileTypes.csv.ToString();
 

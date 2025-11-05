@@ -1,29 +1,62 @@
 ﻿using FileConverter.Core.Models;
+using FileConverter.Core.Services.FileLoaderService;
+using FileConverter.Service.Services.FileLoader;
+using FileConverter.Service.Services.FileMonitor;
 using Microsoft.Extensions.Configuration;
-using System.Configuration;
-using System.Data;
+using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Threading.Tasks;
 using System.Windows;
+using TradeMonitorApp;
 
-namespace FileConverter
+namespace TradeMonitorWPF
 {
-    /// <summary>
-    /// Interaction logic for App.xaml
-    /// </summary>
     public partial class App : Application
     {
         public static MonitorSettings Settings { get; private set; }
-        protected override void OnStartup(StartupEventArgs e)
+
+        protected override async void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
-            var config = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
-                .Build();
 
-            Settings = config.GetSection("MonitorSettings")
-                .Get<MonitorSettings>();
+            try
+            {
+                var config = new ConfigurationBuilder()
+                    .SetBasePath(Directory.GetCurrentDirectory())
+                    .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+                    .Build();
+
+                var Settings = config.GetSection("MonitorSettings").Get<MonitorSettings>();
+
+                if (Settings == null)
+                    throw new Exception("MonitorSettings section is missing or invalid in appsettings.json.");
+
+                var loaders = new List<IFileLoaderService>
+                {
+                    new CsvLoaderService(),
+                    new XmlLoaderService(),
+                    new TxtLoaderService()
+                };
+
+                var monitor = new FileMonitorService(
+                    loaders,
+                    Settings.InputDirectory,
+                    Settings.CheckFrequencySeconds
+                );
+
+                var vm = new MainViewModel(monitor);
+
+                var window = new MainWindow { DataContext = vm };
+                window.Show();
+
+                await monitor.StartAsync();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Config loading error: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                Shutdown();
+            }
         }
     }
-
 }
