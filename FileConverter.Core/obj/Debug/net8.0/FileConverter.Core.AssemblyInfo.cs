@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FileConverter.Core")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+830eec617a3cb49a4bbd9b1fbdbc37fe02c9a882")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+857fc6b2b026d2f40f988ddb1a96bed3b5273a54")]
 [assembly: System.Reflection.AssemblyProductAttribute("FileConverter.Core")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FileConverter.Core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
